@@ -2,6 +2,12 @@
 
 All notable changes are documented here. Versions follow Semantic Versioning.
 
+## 0.1.1 - 2026-08-05
+
+- Added a versioned machine-readable capability contract for agent discovery.
+- Documented the local-only, zero-custody safety boundary in the package README.
+- Prevented Registry authentication tokens from being accidentally staged by Git.
+
 ## 0.1.0 - 2026-08-05
 
 Initial public release.

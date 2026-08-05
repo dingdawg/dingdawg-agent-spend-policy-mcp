@@ -1,0 +1,42 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "schemaVersion": "1.0.0",
+  "name": "io.github.dingdawg/agent-spend-policy-mcp",
+  "package": "@dingdawg/agent-spend-policy-mcp",
+  "version": "0.1.0",
+  "transport": "stdio",
+  "tools": [
+    {
+      "name": "evaluate_spend_policy",
+      "title": "Evaluate agent spend-policy eligibility",
+      "requiredInputs": [
+        "evaluationTime",
+        "policy",
+        "action",
+        "alreadySpentMicros"
+      ],
+      "outputs": {
+        "outcome": ["ELIGIBLE", "DENY", "STEP_UP"],
+        "reasonCode": "stable machine-readable reason code"
+      },
+      "sideEffects": false,
+      "boundary": {
+        "holdsFunds": false,
+        "handlesKeysOrPaymentCredentials": false,
+        "networkAccess": false,
+        "paymentAuthorization": false,
+        "paymentSigning": false,
+        "paymentTransmission": false,
+        "paymentSettlement": false,
+        "paymentCustody": false,
+        "paymentRecording": false
+      },
+      "claim": "The result is local policy evidence only, not payment authorization."
+    }
+  ],
+  "evidence": {
+    "toolRegistration": "src/index.ts",
+    "policyEngine": "src/policy.ts",
+    "deterministicTests": "test/policy.test.ts"
+  }
+}
