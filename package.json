@@ -1,0 +1,47 @@
+{
+  "name": "@dingdawg/agent-spend-policy-mcp",
+  "version": "0.1.0",
+  "description": "A local, deterministic MCP evaluator for agent spend-policy eligibility. It never holds funds, keys, or payment credentials.",
+  "license": "MIT",
+  "type": "module",
+  "main": "./dist/src/index.js",
+  "types": "./dist/src/index.d.ts",
+  "bin": {
+    "dingdawg-agent-spend-policy-mcp": "./dist/src/index.js"
+  },
+  "files": [
+    "dist/src",
+    "README.md",
+    "LICENSE",
+    "server.json"
+  ],
+  "mcpName": "io.github.dingdawg/agent-spend-policy-mcp",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/DingDawg/dingdawg-agent-spend-policy-mcp.git"
+  },
+  "bugs": {
+    "url": "https://github.com/DingDawg/dingdawg-agent-spend-policy-mcp/issues"
+  },
+  "homepage": "https://github.com/DingDawg/dingdawg-agent-spend-policy-mcp#readme",
+  "publishConfig": {
+    "access": "public"
+  },
+  "engines": {
+    "node": ">=20"
+  },
+  "scripts": {
+    "build": "tsc -p tsconfig.json",
+    "test": "npm run build && node --test dist/test",
+    "lint": "tsc -p tsconfig.json --noEmit",
+    "pack:check": "npm pack --dry-run"
+  },
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.30.0",
+    "zod": "^3.24.2"
+  },
+  "devDependencies": {
+    "@types/node": "^20.17.0",
+    "typescript": "^5.7.3"
+  }
+}
