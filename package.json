@@ -7,7 +7,7 @@
   "main": "./dist/src/index.js",
   "types": "./dist/src/index.d.ts",
   "bin": {
-    "dingdawg-agent-spend-policy-mcp": "./dist/src/index.js"
+    "dingdawg-agent-spend-policy-mcp": "dist/src/index.js"
   },
   "files": [
     "dist/src",
@@ -18,7 +18,7 @@
   "mcpName": "io.github.dingdawg/agent-spend-policy-mcp",
   "repository": {
     "type": "git",
-    "url": "https://github.com/DingDawg/dingdawg-agent-spend-policy-mcp.git"
+    "url": "git+https://github.com/DingDawg/dingdawg-agent-spend-policy-mcp.git"
   },
   "bugs": {
     "url": "https://github.com/DingDawg/dingdawg-agent-spend-policy-mcp/issues"
