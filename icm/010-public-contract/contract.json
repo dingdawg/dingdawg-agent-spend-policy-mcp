@@ -1,0 +1,13 @@
+{
+  "schema_version": "1.0",
+  "contract_id": "dingdawg.agent-spend-policy-mcp.public.v1",
+  "scope": "Local deterministic eligibility evaluation for a proposed agent spend action.",
+  "tool": "evaluate_spend_policy",
+  "outcomes": ["ELIGIBLE", "DENY", "STEP_UP"],
+  "side_effects": "none",
+  "network_access": false,
+  "payment_authority": false,
+  "custody": false,
+  "secret_sauce_disclosure": false,
+  "evidence": "Stable outcome and reason code; detailed schema in capabilities.json."
+}

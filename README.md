@@ -53,6 +53,14 @@ The versioned machine-readable contract is
 package exposes, its required inputs, its three possible outcomes, and its
 non-negotiable safety boundary.
 
+## Deterministic ICM contract
+
+This package also includes a small public [ICM contract](./icm/ROUTER.md).
+It lets any MCP client or MiLA-enabled workflow load only the information it
+needs: the tool contract, allowed outcomes, side effects, and safety boundary.
+It contains no private prompts, routing logic, credentials, or hidden policy
+rules. Run `npm run icm:check` to verify the public contract before release.
+
 - Transport: local stdio MCP
 - Tool: `evaluate_spend_policy`
 - Required inputs: `evaluationTime`, `policy`, `action`, and

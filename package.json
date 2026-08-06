@@ -14,7 +14,8 @@
     "README.md",
     "LICENSE",
     "server.json",
-    "capabilities.json"
+    "capabilities.json",
+    "icm"
   ],
   "mcpName": "io.github.dingdawg/agent-spend-policy-mcp",
   "repository": {
@@ -35,7 +36,8 @@
     "build": "tsc -p tsconfig.json",
     "test": "npm run build && node --test dist/test",
     "lint": "tsc -p tsconfig.json --noEmit",
-    "pack:check": "npm pack --dry-run"
+    "pack:check": "npm pack --dry-run",
+    "icm:check": "bash icm/010-public-contract/done.sh && bash icm/010-public-contract/verify.sh"
   },
   "dependencies": {
     "@modelcontextprotocol/sdk": "^1.30.0",
